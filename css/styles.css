@@ -1,0 +1,23 @@
+.main_banner_bg{
+    height: 350px;
+    width: 100%;
+    background-color: rgb(60, 22, 96);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+
+.main_banner_img{
+    width: 100%;
+    height: auto;
+    padding: 0px 100px;
+    padding-top: 50px;
+   
+}
+
+.content{
+    padding-top: 50px;
+}
