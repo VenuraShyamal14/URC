@@ -2,9 +2,9 @@
 
 
 .main_banner_bg{
-    height: 350px;
+    height: 60%;
     width: 100%;
-    padding-top: 56px;
+    padding-top: 5%;
     background-color: rgb(60, 22, 96);
     display: flex;
     justify-content: center;
@@ -17,18 +17,18 @@
 .main_banner_img{
     width: 100%;
     height: auto;
-    padding: 0px 100px;
+    
     padding-top: 10%;
     margin-bottom: 10%;
 }
 
 .content{
-    padding-top: 50px;
+    padding-top: 5%;
 }
 
 .carousel{
     padding: 0px 10%;
-    padding-top: 120px;
+    padding-top: 12%;
 }
 
 h1{
@@ -44,11 +44,11 @@ p{
 }
 
 h2{
-    padding-top: 100px;
+    padding-top: 10%;
 }
 
 #card{
-    margin-top: 100px;
+    margin-top: 10%;
     margin-left: 10%;
     margin-right: 10%;
 }
