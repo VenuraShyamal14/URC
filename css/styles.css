@@ -4,6 +4,7 @@
 .main_banner_bg{
     height: 350px;
     width: 100%;
+    padding-top: 56px;
     background-color: rgb(60, 22, 96);
     display: flex;
     justify-content: center;
@@ -27,6 +28,7 @@
 
 .carousel{
     padding: 0px 10%;
+    padding-top: 120px;
 }
 
 h1{
@@ -43,4 +45,10 @@ p{
 
 h2{
     padding-top: 100px;
+}
+
+#card{
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
