@@ -1,3 +1,9 @@
+
+body {
+    background-color: lightblue;
+}
+
+
 .main_banner_bg{
     height: 350px;
     width: 100%;
@@ -15,9 +21,13 @@
     height: auto;
     padding: 0px 100px;
     padding-top: 50px;
-   
+    margin-bottom: 50px;
 }
 
 .content{
     padding-top: 50px;
+}
+
+.carousel{
+    padding: 0px 100px;
 }
