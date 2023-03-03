@@ -4,7 +4,7 @@
 .main_banner_bg{
     height: 60%;
     width: 100%;
-    padding-top: 5%;
+    padding-top: 56px;
     background-color: rgb(60, 22, 96);
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@ p{
 }
 
 h2{
-    padding-top: 10%;
+    padding-top: 56px;
 }
 
 #card{
