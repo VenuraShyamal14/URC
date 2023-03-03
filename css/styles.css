@@ -17,8 +17,8 @@
     width: 100%;
     height: auto;
     padding: 0px 100px;
-    padding-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 10%;
+    margin-bottom: 10%;
 }
 
 .content{
@@ -26,17 +26,17 @@
 }
 
 .carousel{
-    padding: 0px 100px;
+    padding: 0px 10%;
 }
 
 h1{
     color: #131313;
-    padding: 0px 100px;
+    padding: 0px 10%;
     
 }
 
 p{
     color: #131313;
-    padding: 0px 100px;
+    padding: 0px 10%;
    
 }
