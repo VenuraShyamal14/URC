@@ -1,7 +1,4 @@
 
-body {
-    background-color: lightblue;
-}
 
 
 .main_banner_bg{
@@ -30,4 +27,16 @@ body {
 
 .carousel{
     padding: 0px 100px;
+}
+
+h1{
+    color: #131313;
+    padding: 0px 100px;
+    
+}
+
+p{
+    color: #131313;
+    padding: 0px 100px;
+   
 }
