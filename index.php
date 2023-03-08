@@ -17,8 +17,8 @@
         include('navbar.html');
     ?>
 
-    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+    <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-inner border border-danger">
         <div class="carousel-item active">
           <img src="img/Banner 1.jpg" class="d-block w-100" alt="banner 1">
         </div>

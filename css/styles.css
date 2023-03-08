@@ -1,39 +1,26 @@
 
-/*
 
-.main_banner_bg{
-    height: 60%;
-    width: 100%;
-  
-    background-color: rgb(60, 22, 96);
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    z-index: -1;
-    
-}
-
-*/
 .content{
     padding-top: 5%;
+    color: #800000;
 }
 
 
-
-h1{
-    
-    padding: 0px 10%;
-    
+h1{ 
+    padding: 0px 10%; 
+    color: #800000;
 }
 
 p{
     
     padding: 0px 10%;
+    color: #800000;
    
 }
 
 h2{
     padding-top: 56px;
+    color: #800000;
 }
 
 #card{
@@ -57,3 +44,27 @@ h2{
     padding-top: 50px;
 }
 
+.dropdown-item{
+    color: #800000;
+    font-weight: bold;
+}
+
+.dropdown-toggle{
+    color: #800000;
+    font-weight: bold;
+}
+
+.navbar-brand{
+    color: #800000;
+    font-weight: bold;
+}
+
+.card-title{
+    color: #fd7e14;
+    font-weight: bold;
+}
+
+.card-text{
+    color: #800000;
+    font-weight: bold;
+}
