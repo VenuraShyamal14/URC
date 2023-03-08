@@ -64,7 +64,7 @@ h2{
 }
 
 .carouselImg{
-    height: 75vh;
+    height: 70vh;
     width: 100vw;
 
 
@@ -77,6 +77,11 @@ h2{
 .carousel-control-next{
     padding-top: 50px;
 }
+
+.carousel-title{
+    padding-top: 10vh;
+}
+
 
 
 
