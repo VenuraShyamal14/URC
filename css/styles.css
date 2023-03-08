@@ -25,20 +25,49 @@ h2{
 }
 
 #card{
-    margin-top: 10%;
     margin-left: 10%;
     margin-right: 10%;
+    padding-top: 50vh;
 }
 
 .card-body{
     background-color: #E8F3D6;
 }
 
+
+.card-title{
+    color: #fd7e14;
+    font-weight: bold;
+            /*limit the card txt lines to 1*/
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.card-text{
+    color: #800000;
+    font-weight: bold;
+        /*limit the card txt lines to 3*/
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
 #carouselControls{
-    margin-top: 56px;
-    padding-top: 50px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-top: 56px;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.carouselImg{
+    height: 75vh;
+    width: 100vw;
+
+
 }
 
 .carousel-control-prev{
@@ -48,6 +77,8 @@ h2{
 .carousel-control-next{
     padding-top: 50px;
 }
+
+
 
 .dropdown-item{
     color: #800000;
@@ -64,14 +95,8 @@ h2{
     font-weight: bold;
 }
 
-.card-title{
-    color: #fd7e14;
-    font-weight: bold;
-}
-
-.card-text{
-    color: #800000;
-    font-weight: bold;
+.navbar{
+    background-color: #FFE7CC;
 }
 
 footer{
@@ -90,21 +115,13 @@ footer{
 }
 
 
-a:link {
-     text-decoration: none; 
-    }
+a:link { text-decoration: none; }
 
 
-a:visited { 
-    text-decoration: none; 
-}
+a:visited { text-decoration: none; }
 
 
-a:hover { 
-    text-decoration: none; 
-}
+a:hover { text-decoration: none; }
 
 
-a:active {
-     text-decoration: none; 
-    }
+a:active { text-decoration: none; }

@@ -11,13 +11,13 @@
     <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <div class="carousel-inner border border-danger">
         <div class="carousel-item active">
-          <img src="img/Banner 1.jpg" class="d-block w-100" alt="banner 1">
+          <img class="carouselImg" src="img/Banner 1.jpg" class="d-block w-100" alt="banner 1">
         </div>
         <div class="carousel-item">
-          <img src="img/Banner 2.jpg" class="d-block w-100" alt="banner 2">
+          <img class="carouselImg" src="img/Banner 2.jpg" class="d-block w-100" alt="banner 2">
         </div>
         <div class="carousel-item">
-          <img src="img/Banner 4.jpg" class="d-block w-100" alt="banner 3">
+          <img class="carouselImg" src="img/Banner 3.jpg" class="d-block w-100" alt="banner 3">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
