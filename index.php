@@ -1,5 +1,5 @@
 <!--header-->
-  <?php
+<?php
       include('header.html');
   ?>
 
@@ -31,42 +31,52 @@
     </div>
 
     <div id="card" class="row row-cols-1 row-cols-md-3 g-4" >
-      <div class="col">
-        <div class="card h-100">
-          <img src="img/explore.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Explore Our Research</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="img/innovation.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Innovation and Impact</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="img/research.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Our Research Environment</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-          </div>
-        </div>
-      </div>
+        <a class="cardlink" href="/sub topics/explore/On_going_research_projects.php">
+            <div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/explore.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Explore Our Research</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="cardlink" href="/sub topics/Innovation_and_impact/Research_impact.php">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/innovation.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Innovation and Impact</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="cardlink" href="/sub topics/Our research environment/Supporting_researchers.php">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/research.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Our Research Environment</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+
     </div>
 
     <h1 class="content">content</h1>
