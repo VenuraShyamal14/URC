@@ -1,5 +1,5 @@
 
-
+/*
 
 .main_banner_bg{
     height: 60%;
@@ -13,24 +13,21 @@
     
 }
 
-
+*/
 .content{
     padding-top: 5%;
 }
 
-.carousel{
-    padding: 0px 10%;
-    padding-top: 12%;
-}
+
 
 h1{
-    color: #131313;
+    
     padding: 0px 10%;
     
 }
 
 p{
-    color: #131313;
+    
     padding: 0px 10%;
    
 }
@@ -47,13 +44,16 @@ h2{
 
 #carouselControls{
     margin-top: 56px;
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .carousel-control-prev{
-    padding-top: 112px;
+    padding-top: 50px;
 }
 
 .carousel-control-next{
-    padding-top: 112px;
+    padding-top: 50px;
 }
 

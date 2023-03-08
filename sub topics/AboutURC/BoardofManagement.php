@@ -10,7 +10,7 @@
    
 
 </head>
-<body style="background-color:rgb(108, 31, 180);">
+<body >
      <!--navbar-->
      <?php
      include('../../navbar.html');
