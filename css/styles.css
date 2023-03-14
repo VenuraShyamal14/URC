@@ -41,7 +41,7 @@ section{
     
 }
 
-#card{
+#Imgcard{
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 50vh;
@@ -103,16 +103,52 @@ section{
 
 
 .dropdown-item{
-    color: #000000;
-    font-size: 1em;
-    
+    color: #fd7e14;
+    font-size: 1em; 
+}
+
+.dropdown-menu{
+    background-color: #800000;
+
 }
 
 .dropdown-toggle{
     color: #fd7e14;
     text-shadow: 1px 1px #000000;
     font-size: 1.3em;
+    border-radius: 20px;
+    
 }
+
+/*removed dropdown toggle icon*/
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+/*tempory disabled*/
+/* Show the dropdown menu on hover */
+/*
+.dropdown:hover .dropdown-menu {display: block;}
+*/
+
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown-toggle:hover {
+    background-color: #fd7e14;
+    color: #800000;
+    }
+.navbar-brand:hover {
+    background-color: #800000;
+    color: #fd7e14;
+    }
+
+/* Change the background color of the dropdown menue when the mouse hover */
+.dropdown-item:hover {
+    background-color: #fd7e14;
+    color: #800000;
+    }
 
 .navbar-brand{
     color: #fd7e14;
@@ -120,6 +156,8 @@ section{
     font-size: 1.5em;
     text-shadow: 2px 2px #000000;
 }
+
+
 
 .navbar{
     background-color: #800000;
@@ -151,3 +189,19 @@ a:hover { text-decoration: none; }
 
 
 a:active { text-decoration: none; }
+
+
+
+
+.d-flex{
+    margin-top: 100px;
+    position: relative;
+    margin-left: 100px; 
+    margin-bottom: 1000px;
+    margin-right: 100px;
+      
+}
+
+
+
+
