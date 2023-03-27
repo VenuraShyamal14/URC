@@ -1,67 +1,70 @@
 <!--header-->
 <?php
       include('../../header.html');
-  ?>
+    ?>
 
    <!--navbar-->
    <?php
    include('../../navbar.html');
     ?>
 
-
-<!-- popup wenne meke tika-->
-    <div class="popup" id="popupid">
-        <img src="/img/publications.jpg" alt="publications Icon" width="100" height="100" >
-        <h2>PUBLICATIONS</h2>
-        
-        <div id="pubConId" class="publication-content">
-            <iframe id="loadHtml" width="100%" height="100%" src="/publications.html"></iframe>
-        </div>
-        
-        <button id="backBtn" type="button" class="btn btn-primary">back</button>
-    </div>
+    <?php 
+    include_once("../../db_connect.php");
+    ?>
 
 
 
-<!--table-->
-    <h4 class="row justify-content-md-center table-title">
-        Tier 4* Researchers Awrdees-2022
-    </h4>
-    <div class="row justify-content-center tablediv">
-        <div class="col-auto">
-          <table class="table table-responsive table-hover table-bordered border-dark">
-            <thead>
-                <tr>
-                  <th scope="col">NO</td>
-                  <th scope="col">NAME</th>
-                  <th scope="col">FACULTY</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr >
-                  <td scope="row">01</td>
-                  <td class="clickname SAHASuraweera">Dr. SAHA Suraweera</td>
-                  <td>Engineering</td>
-                </tr>
-                <tr>
-                  <td scope="row">02</td>
-                  <td class="clickname BCJayawardana">Prof. BC Jayawardana</td>
-                  <td>Agriculture</td>
-                </tr>
-                <tr>
-                    <td scope="row">03</td>
-                    <td class="clickname KMSWimalasiri">Prof. KMS Wimalasiri</td>
-                    <td>Agriculture</td>
-                </tr>
-                <tr>
-                    <td scope="row">04</td>
-                    <td class="clickname DNBGunawardane">Prof. DNB Gunawardane</td>
-                    <td>Arts</td>
-                </tr>
-              </tbody>
-          </table>
+    <div class="container bcontent">
+        <h2>Tier 4* Researchers</h2>
+        <hr />
+        <div class="card" style="width: 500px;">
+            <?php
+                $sql = "SELECT id, honorific, initials, name, faculty, URL, details FROM cards";
+                $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));			
+                while( $record = mysqli_fetch_assoc($resultset) ) {
+                ?>
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img alt="" src="<?php echo $record['URL']; ?>" height="200px">
+                </div>
+                <div class="col-sm-7">
+                    <div class="title">
+                        <?php echo $record['honorific']; ?>
+                        <?php echo $record['initials']; ?>
+                        <?php echo $record['name']; ?>
+                    </div>
+						
+                    <div class="desc"><?php echo $record['faculty']; ?></div>      
+					
+                    <a href="#" id="<?php echo $record['id']?>" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+            
+            <!-- popup wenne meke tika-->
+            <div class="popup" id="popupid">
+                <img src="<?php echo $record['URL']; ?>" alt="publications Icon" width="100" height="100" >
+                <h2>PUBLICATIONS</h2>
+                
+    
+                <p><?php echo $record['details']; ?></p>
+ 
+                <button id="backBtn" type="button" class="btn btn-primary">back</button>
+            </div>
+
+            <?php } ?>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
 
 <!--footer-->
 <?php
