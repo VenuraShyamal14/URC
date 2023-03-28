@@ -1,28 +1,12 @@
-const popup = document.getElementById("popupid");
+
 const nav_publication_btn = document.getElementById("nav_publication");
-const backBtn = document.getElementById("backBtn");
-//const content = document.getElementById("loadHtml");
-//document.getElementById('forecast_embed').contentDocument.location.reload(true);
-const buttons = document.querySelectorAll('.detail_btn');
+
+const temp_popup = document.getElementById("temp_popup");
+
+
 const checkbuttons = document.querySelectorAll('.btn-check');
 
 
-// Loop through and add a click event listener to each one of tr
-buttons.forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    // Get the class of the clicked button
-    //const clickedText = event.target.classList[1];
-    //sendData(event.target.id);
-    // Log the clicked text to the console
-   // console.log(clickedText);
-
-    //change the html
-    //content.src = 'http://venuraurc.epizy.com/publications/DNBGunawardane.html';
-   
-    //open popup
-    popup.classList.add("open-popup");
-  });
-});
 
 
 checkbuttons.forEach(function(checkbox) {
@@ -36,16 +20,11 @@ checkbuttons.forEach(function(checkbox) {
 
 checkbuttons.forEach(function(button) {
   button.addEventListener('click', function(event) {
-
         searchData(event.target.id);
-
   });
 });
 
 
-backBtn.addEventListener('click', function() {
-  popup.classList.remove("open-popup");
-});
 
 
 function sendData(id) {
@@ -77,7 +56,7 @@ function sendData(id) {
 }
 
 
-
+let myObj;
 function searchData(id) {
     var data = {
         Id: id,
@@ -95,12 +74,12 @@ function searchData(id) {
             
             //var returned_data=xhr.responseText;
             //alert(returned_data);
-            const myObj = JSON.parse(this.responseText);
+            myObj = JSON.parse(this.responseText);
             displayData(myObj);
             //alert(myObj[0].faculty);
             //paragraph.innerHTML=xhr.responseText;
         }
-        xmlhttp.open("GET", "search_data.php");
+        //xhr1.open("GET", "search_data.php");
     };
 
     // send the data
@@ -116,6 +95,9 @@ function displayData(data) {
   // create a new row to hold the cards
   var row = document.createElement('div');
   row.classList.add('row', 'row-cols-3', 'g-4', 'py-3');
+  row.style.justifyContent = "space-evenly";
+
+  
 
 if (data.length>0){
   // iterate through the data and create a card for each item
@@ -127,11 +109,15 @@ if (data.length>0){
     // create a new card
     var card = document.createElement('div');
     card.classList.add('card', 'col-md-3');
+    //card.style.marginRight = "50px";
+    //card.style.marginleft = "50px";
 
     //create img
     var cardImg= document.createElement('img');
-    cardImg.classList.add('card-img-top');
+    cardImg.classList.add('card-img-top', 'mx-30');
     cardImg.src=item.URL ;
+    cardImg.style.paddingLeft='10px';
+    cardImg.style.paddingRight='10px';
     cardImg.height=250;
     cardImg.width=250;
     card.appendChild(cardImg);
@@ -154,9 +140,12 @@ if (data.length>0){
     cardBody.appendChild(faculty);
 
     var b1 = document.createElement('button');
-    b1.classList.add('btn','btn-primary');
-    b1.classList.add('detail_btn')
+    b1.classList.add('btn','btn-primary','detail_btn1');
+    b1.setAttribute("id", i);
     b1.innerHTML = 'view profile';
+    b1.addEventListener('click', function() {
+        displayPopup(event.target.id);
+        });
     cardBody.appendChild(b1);
 
     //add the card body to the card
@@ -165,20 +154,64 @@ if (data.length>0){
     //add the card to the row
     row.appendChild(card);
 
-    // if two cards have been added to the row, create a new row
+    // if 3 cards have been added to the row, create a new row
     if ((i + 1) % 3 === 0) {
       outputDiv.appendChild(row);
       row = document.createElement('div');
       row.classList.add('row', 'row-cols-3', 'g-4', 'py-3');
+      row.style.justifyContent = "space-evenly";
     }
-  }
-}
 
-  // if there is an odd number of cards, add the last row
+     // if there is 2  number of cards, add the last row
   if (data.length % 3 === 2) {
     outputDiv.appendChild(row);
   }
   if (data.length % 3 === 1) {
     outputDiv.appendChild(row);
   }
+    }
+
+ 
+  }
+}
+
+
+
+
+function displayPopup(content){
+    //alert(myObj[content].name);
+    
+    var temp = document.createElement('div');
+    temp.setAttribute("id", "temp_popup");
+    temp.classList.add('position-fixed');
+    temp.style.top='30%';
+    temp.style.left='15%';
+    temp.style.backgroundColor='#ECF9FF';
+    temp.style.width='70vw';
+    temp.style.padding='50px';
+    temp.style.borderRadius='10px';
+    temp.style.boxShadow='5px 10px 8px 10px #888888';
+
+  // Create a content element with name and description
+  var name1 = document.createElement('h2');
+  name1.textContent = myObj[content].honorific + myObj[content].initials + myObj[content].name;
+  var description = document.createElement('p');
+  description.textContent = myObj[content].details;
+  var temp_button= document.createElement('button');
+  temp_button.classList.add('btn','btn-primary');
+  temp_button.textContent='back';
+  temp_button.addEventListener("click",function(){
+      removepopup(temp);
+  });
+
+  // Add the content elements to the popup
+  temp.appendChild(name1);
+  temp.appendChild(description);
+  temp.appendChild(temp_button);
+  // Add the popup to the page
+  document.body.appendChild(temp);
+}
+
+function removepopup(temp){
+    temp.remove();
 }

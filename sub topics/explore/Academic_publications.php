@@ -47,53 +47,6 @@
 
 </div>
 <div  id="test" class="container"  ></div>
-<div class="container">
-        <h2>Tier 4* Researchers</h2>
-        <hr />
-        <div class="card" style="width: 500px;">
-            <?php
-               
-               
-                $sql = "SELECT id, honorific, initials, name, faculty, URL, details FROM cards where faculty='Agriculture'";
-                $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));			
-                while( $record = mysqli_fetch_assoc($resultset) ) {
-                ?>
-            <div class="row no-gutters">
-                <div class="col-sm-5">
-                    <img id='researcher_img'alt="" src="<?php echo $record['URL']; ?>" height="200px">
-                </div>
-                <div class="col-sm-7">
-                    <div class="title">
-                        <?php echo $record['honorific']; ?>
-                        <?php echo $record['initials']; ?>
-                        <?php echo $record['name']; ?>
-                    </div>
-						
-                    <div class="desc"><?php echo $record['faculty']; ?></div>      
-					
-                    <a href="#" id="<?php echo $record['id']?>" class="btn btn-primary detail_btn">View Profile</a>
-                </div>
-            </div>
-
-            <?php } ?>
-        </div>
-    </div>
-
-
-
-            <!-- popup wenne meke tika-->
-            <div class="popup" id="popupid">
-                <img src="../../img/publications.jpg" alt="publications Icon" width="100" height="100" >
-                <h2>PUBLICATIONS</h2>
-                
-    
-                <p id="popup_p"><?php echo $record['details']; ?></p>
- 
-                <button id="backBtn" type="button" class="btn btn-primary">back</button>
-            </div>
-
-
-</div>
 
 <!--footer-->
 <?php
