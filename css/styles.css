@@ -1,4 +1,5 @@
 
+
 .content{
     padding-top: 5%;
     color: #800000;
@@ -26,32 +27,36 @@ h2{
 }
 
 
-.top{
-    padding-top: 150px;
-}
-
-.bottom{
-    padding-bottom: 200px;
-}
-
-
-section{
-    padding-bottom: 100px;
-    
-}
 
 #Imgcard{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: -200px;
+    
 }
 
-.card-body{
+#Imgcard .card-body{
     background-color: #F0EEED;
+ 
 }
 
+#Imgcard .card iframe{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
 
-.card-title{
+#Imgcard .card img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+#Imgcard .card {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    
+}
+
+#Imgcard .card-title{
     color: #fd7e14;
     font-weight: bold;
             /*limit the card txt lines to 1*/
@@ -61,7 +66,7 @@ section{
     -webkit-box-orient: vertical;
 }
 
-.card-text{
+#Imgcard .card-text{
     color: #800000;
     font-weight: bold;
         /*limit the card txt lines to 3*/
@@ -79,6 +84,8 @@ section{
 .cardlink:active { text-decoration: none; }
 
 
+
+
 #carouselControls{  
     position: relative;
 }
@@ -93,6 +100,9 @@ section{
 .dropdown-item{
     color: #fd7e14;
     font-size: 1em; 
+    transition-property: background-color;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
 }
 
 .dropdown-menu{
@@ -102,10 +112,12 @@ section{
 
 .dropdown-toggle{
     color: #fd7e14;
-    text-shadow: 1px 1px #000000;
-    font-size: 1.3em;
-    border-radius: 20px;
     
+    font-size: 1.3em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
 }
 
 /*removed dropdown toggle icon*/
@@ -123,20 +135,24 @@ section{
 
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
+
 .dropdown-toggle:hover {
-    background-color: #fd7e14;
-    color: #800000;
-    }
+    background-color: #6e0303;
+    color: #fd7e14;
+   
+}
+
 .navbar-brand:hover {
     background-color: #800000;
     color: #fd7e14;
-    }
+}
 
 /* Change the background color of the dropdown menue when the mouse hover */
+
 .dropdown-item:hover {
     background-color: #fd7e14;
     color: #800000;
-    }
+}
 
 .navbar-brand{
     color: #fd7e14;
@@ -149,6 +165,7 @@ section{
 
 .navbar{
     background-color: #800000;
+    color: #fd7e14;
 }
 
 footer{
@@ -189,50 +206,29 @@ footer{
 
 .text{
     width: 50%;
+
     display: inline-block ;
+
 }
 
-.popup{
-    width: 60vw;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(0.1);
-    padding: 25px;
-    box-shadow: 0 2px 5px black;
-    visibility: hidden;
-    transition: transform 0.4s,top,0.4s;
+
+
+
+
+.btn{
+    color: white;
+    background-color: #800000;
+    border: black;
 }
 
-.open-popup{
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%,-50%) scale(1);
+.btn:hover{
+    color: #800000;
+    background-color: #fd7e14;
 }
 
-.popup img{
-    margin-top: -50px;
-    border-radius: 50%;
-    box-shadow: 0 1px 7px black;
-}
-.popup h2{
-    margin-top: -50px;
-    margin-left: 120px;
+
+.check_btn{
+    background-color: #800000;
+    color: white;
 }
 
-.popup p{
-    margin-top: 50px;
-}
-
-.popup button{
-    margin-top: 30px;
-    
-    
-}
-.publication-content{
-    margin-top: 50px;
-    overflow-y: auto;
-    height: 300px; 
-}

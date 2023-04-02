@@ -3,8 +3,8 @@ const nav_publication_btn = document.getElementById("nav_publication");
 
 const temp_popup = document.getElementById("temp_popup");
 
-
 const checkbuttons = document.querySelectorAll('.btn-check');
+
 
 
 
@@ -109,6 +109,7 @@ if (data.length>0){
     // create a new card
     var card = document.createElement('div');
     card.classList.add('card', 'col-md-3');
+    card.style.boxShadow='5px 10px 8px 10px #888888';
     //card.style.marginRight = "50px";
     //card.style.marginleft = "50px";
 
@@ -116,10 +117,11 @@ if (data.length>0){
     var cardImg= document.createElement('img');
     cardImg.classList.add('card-img-top', 'mx-30');
     cardImg.src=item.URL ;
+    cardImg.style.objectFit='contain';
     cardImg.style.paddingLeft='10px';
     cardImg.style.paddingRight='10px';
     cardImg.height=250;
-    cardImg.width=250;
+    cardImg.width='auto';
     card.appendChild(cardImg);
 
     // create the card body
@@ -180,17 +182,21 @@ if (data.length>0){
 
 function displayPopup(content){
     //alert(myObj[content].name);
-    
+  
     var temp = document.createElement('div');
     temp.setAttribute("id", "temp_popup");
     temp.classList.add('position-fixed');
+    temp.style.overflow='scroll';
     temp.style.top='30%';
     temp.style.left='15%';
     temp.style.backgroundColor='#ECF9FF';
     temp.style.width='70vw';
+    temp.style.height='50vh';
     temp.style.padding='50px';
     temp.style.borderRadius='10px';
     temp.style.boxShadow='5px 10px 8px 10px #888888';
+
+    //document.body.classList.add('bg-secondary','bg-gradient');
 
   // Create a content element with name and description
   var name1 = document.createElement('h2');
