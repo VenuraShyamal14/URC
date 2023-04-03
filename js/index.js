@@ -122,6 +122,7 @@ if (data.length>0){
     cardImg.style.paddingRight='10px';
     cardImg.height=250;
     cardImg.width='auto';
+    //cardImg.style.borderRadius='50%';
     card.appendChild(cardImg);
 
     // create the card body
@@ -136,13 +137,13 @@ if (data.length>0){
     cardBody.appendChild(name);
 
     //add the faculty to the card body
-    var faculty = document.createElement('p');
+    var faculty = document.createElement('h6');
     faculty.classList.add('card-text');
     faculty.innerHTML = 'Faculty of ' + item.faculty;
     cardBody.appendChild(faculty);
 
     var b1 = document.createElement('button');
-    b1.classList.add('btn','btn-primary','detail_btn1');
+    b1.classList.add('btn','detail_btn1');
     b1.setAttribute("id", i);
     b1.innerHTML = 'view profile';
     b1.addEventListener('click', function() {
@@ -186,7 +187,7 @@ function displayPopup(content){
     var temp = document.createElement('div');
     temp.setAttribute("id", "temp_popup");
     temp.classList.add('position-fixed');
-    temp.style.overflow='scroll';
+    
     temp.style.top='30%';
     temp.style.left='15%';
     temp.style.backgroundColor='#ECF9FF';
@@ -201,14 +202,21 @@ function displayPopup(content){
   // Create a content element with name and description
   var name1 = document.createElement('h2');
   name1.textContent = myObj[content].honorific + myObj[content].initials + myObj[content].name;
-  var description = document.createElement('p');
+  var description = document.createElement('h6');
   description.textContent = myObj[content].details;
+  description.style.height='25vh';
+  description.style.overflowY='scroll';
   var temp_button= document.createElement('button');
-  temp_button.classList.add('btn','btn-primary');
+  temp_button.classList.add('btn');
   temp_button.textContent='back';
+  temp_button.style.position='absolute';
+  temp_button.style.right='0';
+  temp_button.style.marginRight='50px';
   temp_button.addEventListener("click",function(){
       removepopup(temp);
   });
+
+  
 
   // Add the content elements to the popup
   temp.appendChild(name1);
@@ -216,8 +224,10 @@ function displayPopup(content){
   temp.appendChild(temp_button);
   // Add the popup to the page
   document.body.appendChild(temp);
+
 }
 
 function removepopup(temp){
     temp.remove();
 }
+

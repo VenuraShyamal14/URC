@@ -230,5 +230,13 @@ footer{
 .check_btn{
     background-color: #800000;
     color: white;
+
 }
 
+#search_results{
+    margin: 50px;
+}
+
+#search_form{
+    margin: 50px;
+}

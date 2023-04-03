@@ -7,8 +7,27 @@
    <?php
    include('../../navbar.html');
     ?>
+    <script>
+		function searchKeyword() {
+			var keyword = $('#keyword').val();
+			$.ajax({
+				type: 'POST',
+				url: '../../search.php',
+				data: { keyword: keyword },
+				success: function(response) {
+					$('#search_results').html(response);
+				}
+			});
+			return false;
+		}
+	</script>
 
-    <h2>this is Academic Publications page</h2>
+    <form id="search_form" onsubmit="return searchKeyword();">
+		<label for="keyword">Field of interest:</label>
+		<input type="text" name="keyword" id="keyword">
+		<button type="submit">Search</button>
+	</form>
+	<div id="search_results"></div>
 
 <!--footer-->
 <?php

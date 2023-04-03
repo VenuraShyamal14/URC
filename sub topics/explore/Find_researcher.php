@@ -16,7 +16,7 @@
 
 ?>
 
-<div class="btn-group d-flex justify-content-center static-top" role="group" aria-label="Basic radio toggle button group"  >
+<div class="btn-group d-flex justify-content-center fixed" role="group" aria-label="Basic radio toggle button group"  >
 
     <input type="radio" class="btn-check " name="btnradio" id="Agriculture" autocomplete="off" checked>
   <label class="btn check_btn " for="Agriculture">Agriculture</label>
