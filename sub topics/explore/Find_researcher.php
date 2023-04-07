@@ -63,15 +63,15 @@
       
     </div>
     <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search Researcher" aria-label="Search">
-        <button class="btn " type="submit">Search</button>
-      </form>
+        <input class="form-control me-2" type="search" placeholder="Search Researcher" id="search_input" aria-label="Search">
+        <button class="btn" id="search_researcher_btn" type="submit" onclick="handleButtonClick(event)">Search</button>
+    </form>
   </div>
 </nav>
 
 <div  id="test" class="container "  ></div>
 
-<div id='blur_bg'>
+<div id='search_results1'>
 
 </div>
 
@@ -82,15 +82,21 @@
 
 
 <script>
-
+var outputDiv = document.getElementById('test');
 const checkbuttons = document.querySelectorAll('.btn-check');
+
+function handleButtonClick(event) {
+  event.preventDefault(); // prevent default behavior of the click event
+  // your code to be executed when the button is clicked
+    search_researcher();
+}
 
 checkbuttons.forEach(function(checkbox) {
           if (checkbox.checked) {
             searchData('Agriculture');
             
           }
-        });
+});
 
 
 checkbuttons.forEach(function(button) {
@@ -100,9 +106,10 @@ checkbuttons.forEach(function(button) {
 });
 
 
+
 function displayData(data) {
   // find the HTML element where you want to display the data
-  var outputDiv = document.getElementById('test');
+  
     outputDiv.innerHTML = '';
   // create a new row to hold the cards
   var row = document.createElement('div');
@@ -145,7 +152,7 @@ function displayData(data) {
     //add the name to the card body
     var name = document.createElement('h5');
     name.classList.add('card-text');
-    name.innerHTML = item.honorific+ item.initials+item.name;
+    name.innerHTML =item.name;
     cardBody.appendChild(name);
 
     //add the faculty to the card body
@@ -156,10 +163,10 @@ function displayData(data) {
 
     var b1 = document.createElement('button');
     b1.classList.add('btn','detail_btn1');
-    b1.setAttribute("id", i);
+    b1.setAttribute("id", item.name);
     b1.innerHTML = 'view profile';
     b1.addEventListener('click', function() {
-        displayPopup(event.target.id);
+        search_publication(event.target.id);
         });
     cardBody.appendChild(b1);
 
@@ -193,10 +200,7 @@ function displayData(data) {
 
 
 
-function displayPopup(content){
-    //alert(myObj[content].name);
-    //alert(myObj[content].details);
-  
+function displayPopup(content){ 
     var temp = document.createElement('div');
     temp.setAttribute("id", "temp_popup");
     temp.classList.add('position-fixed');
@@ -214,10 +218,18 @@ function displayPopup(content){
 
   // Create a content element with name and description
   var name1 = document.createElement('h2');
-  name1.textContent = myObj[content].honorific + myObj[content].initials + myObj[content].name;
+  name1.textContent = content[0].name;
+  var name2 = document.createElement('h5');
+  name2.innerHTML = "<u>total publications : " + content.length +"</u>";
   var description = document.createElement('h6');
   //var withoutQuotes = formattedData.substring(1, formattedData.length - 1);
-  description.innerHTML =JSON.stringify(myObj[content].details, null, 2).replace(/\\n/g, "<br>").replace(/\\r/g, " ").replace(/\\t/g, " ").replace(/\\/g, "").slice(1, -1);
+  //description.innerHTML =JSON.stringify(content.length, null, 2);
+  let text="";
+  for (let j = 0; j < content.length; j++) {
+        text =text.concat(content[j].publication);
+        text =text.concat("<hr>");
+    }
+  description.innerHTML =text;
   description.style.height='25vh';
   description.style.overflowY='scroll';
   var temp_button= document.createElement('button');
@@ -234,6 +246,7 @@ function displayPopup(content){
 
   // Add the content elements to the popup
   temp.appendChild(name1);
+  temp.appendChild(name2);
   temp.appendChild(description);
   temp.appendChild(temp_button);
   // Add the popup to the page
@@ -246,5 +259,60 @@ function removepopup(temp){
 }
 
 
+function search_researcher() {
+			var keyword = $('#search_input').val();
+			$.ajax({
+				type: 'POST',
+				url: '../../search_by_name.php',
+				data: { keyword: keyword },
+				success: function(response) {
+					//$('#search_results1').html(response);
+                    myObj = JSON.parse(response);
+
+                    if (myObj.length != 0) {
+                            displayData(myObj);
+                    } else {
+                            //alert('no data');
+                            outputDiv.innerHTML=" No results found....";
+                    }
+                    //displayData(myObj);
+                    //alert(response);
+				}
+			});
+			return false;
+}
+
+
+function search_publication(keyword) {
+			
+			$.ajax({
+				type: 'POST',
+				url: '../../search_for_publication.php',
+				data: { keyword: keyword },
+				success: function(response) {
+					//$('#search_results1').html(response);
+                    myObj1 = JSON.parse(response);
+
+                    if (myObj1.length != 0) {
+                            displayPopup(myObj1);
+                            //alert(myObj1.length);
+                    } else {
+                            alert('no data');
+                            //outputDiv.innerHTML=" No results found....";
+                    }
+                    //displayData(myObj);
+                    //alert(response);
+				}
+			});
+			return false;
+}
+
 
 </script>
+
+
+
+
+        
+        
+		

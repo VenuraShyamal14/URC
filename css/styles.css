@@ -230,6 +230,7 @@ footer{
 .check_btn{
     background-color: #800000;
     color: white;
+    outline: #fd7e14;
 
 }
 
@@ -239,4 +240,10 @@ footer{
 
 #search_form{
     margin: 50px;
+}
+
+.offcanvas{
+    margin-top: 67px;
+    background-color: #800000;
+    color: #fd7e14;
 }
