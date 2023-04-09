@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <input type="radio" class="btn-check " name="btnradio" id="Agriculture" autocomplete="off" checked>
+          <input type="radio" class="btn-check " name="btnradio" id="Agriculture" autocomplete="off" >
             <label class="btn check_btn btn-outline-danger" for="Agriculture">Agriculture</label>
         </li>
         <li class="nav-item">
@@ -45,7 +45,7 @@
             <label class="btn check_btn btn-outline-danger" for="Dental Sciences">Dental Sciences</label>
         </li>
         <li class="nav-item">
-          <input type="radio" class="btn-check " name="btnradio" id="Engineering" autocomplete="off">
+          <input type="radio" class="btn-check " name="btnradio" id="Engineering" autocomplete="off" checked>
             <label class="btn check_btn btn-outline-danger" for="Engineering">Engineering</label>
         </li>
         <li class="nav-item">
@@ -69,7 +69,7 @@
         </div>
         <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search publication" id="search_input1" aria-label="Search">
-        <button class="btn" id="search_publication_btn" type="submit" onclick="handleButtonClick1(event)">Search</button>
+        <button class="btn btn-search" id="search_publication_btn" type="submit" onclick="handleButtonClick1(event)">Search</button>
         </form>
         </div>
     </nav>
@@ -91,4 +91,23 @@ function handleButtonClick1(event) {
   // your code to be executed when the button is clicked
   searchKeyword();
 }
+
+
+var outputDiv = document.getElementById('search_results');
+const checkbuttons = document.querySelectorAll('.btn-check');
+
+
+checkbuttons.forEach(function(checkbox) {
+          if (checkbox.checked) {
+            searchPublication("Engineering");
+            //alert('hi');
+          }
+});
+
+checkbuttons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+        searchPublication(event.target.id);
+  });
+});
+
 </script>

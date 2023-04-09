@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <input type="radio" class="btn-check " name="btnradio" id="Agriculture" autocomplete="off" checked>
+          <input type="radio" class="btn-check " name="btnradio" id="Agriculture" autocomplete="off" >
             <label class="btn check_btn btn-outline-danger" for="Agriculture">Agriculture</label>
         </li>
         <li class="nav-item">
@@ -40,7 +40,7 @@
             <label class="btn check_btn btn-outline-danger" for="Dental Sciences">Dental Sciences</label>
         </li>
         <li class="nav-item">
-          <input type="radio" class="btn-check " name="btnradio" id="Engineering" autocomplete="off">
+          <input type="radio" class="btn-check " name="btnradio" id="Engineering" autocomplete="off" checked >
             <label class="btn check_btn btn-outline-danger" for="Engineering">Engineering</label>
         </li>
         <li class="nav-item">
@@ -64,12 +64,12 @@
     </div>
     <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search Researcher" id="search_input" aria-label="Search">
-        <button class="btn" id="search_researcher_btn" type="submit" onclick="handleButtonClick(event)">Search</button>
+        <button class="btn btn-search" id="search_researcher_btn" type="submit" onclick="handleButtonClick(event)">Search</button>
     </form>
   </div>
 </nav>
 
-<div  id="test" class="container "  ></div>
+<div  id="find_researcher_result" class="container "  ></div>
 
 <div id='search_results1'>
 
@@ -82,7 +82,7 @@
 
 
 <script>
-var outputDiv = document.getElementById('test');
+var outputDiv = document.getElementById('find_researcher_result');
 const checkbuttons = document.querySelectorAll('.btn-check');
 
 function handleButtonClick(event) {
@@ -93,7 +93,7 @@ function handleButtonClick(event) {
 
 checkbuttons.forEach(function(checkbox) {
           if (checkbox.checked) {
-            searchData('Agriculture');
+            searchData('Engineering');
             
           }
 });
@@ -127,10 +127,10 @@ function displayData(data) {
     //researcher_img.src="item.URL";
     // create a new card
     var card = document.createElement('div');
-    card.classList.add('card', 'col-md-3');
+    card.classList.add('card', 'col-md-3', 'col-sm-5');
     card.style.boxShadow='5px 10px 8px 10px #888888';
-    //card.style.marginRight = "50px";
-    //card.style.marginleft = "50px";
+    card.style.marginRight = "20px";
+    card.style.marginleft = "20px";
 
     //create img
     var cardImg= document.createElement('img');
@@ -165,10 +165,13 @@ function displayData(data) {
     b1.classList.add('btn','detail_btn1');
     b1.setAttribute("id", item.name);
     b1.innerHTML = 'view profile';
+
+    
     b1.addEventListener('click', function() {
         search_publication(event.target.id);
         });
     cardBody.appendChild(b1);
+    cardBody.style.textAlign = "center";
 
     //add the card body to the card
     card.appendChild(cardBody);
@@ -219,12 +222,15 @@ function displayPopup(content){
   // Create a content element with name and description
   var name1 = document.createElement('h2');
   name1.textContent = content[0].name;
+  name1.style.display='inline';
   var name2 = document.createElement('h5');
+  name2.style.display='inline';
+  name2.style.float='right';
   name2.innerHTML = "<u>total publications : " + content.length +"</u>";
   var description = document.createElement('h6');
   //var withoutQuotes = formattedData.substring(1, formattedData.length - 1);
   //description.innerHTML =JSON.stringify(content.length, null, 2);
-  let text="";
+  let text="<hr>";
   for (let j = 0; j < content.length; j++) {
         text =text.concat(content[j].publication);
         text =text.concat("<hr>");
@@ -297,7 +303,7 @@ function search_publication(keyword) {
                             displayPopup(myObj1);
                             //alert(myObj1.length);
                     } else {
-                            alert('no data');
+                            alert('database is not updated for this researcher');
                             //outputDiv.innerHTML=" No results found....";
                     }
                     //displayData(myObj);
