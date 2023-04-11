@@ -68,6 +68,7 @@
     </form>
   </div>
 </nav>
+<button type="button" class="btn" onclick="window.location.href='add_data.php';">add data</button>
 
 <div  id="find_researcher_result" class="container "  ></div>
 
