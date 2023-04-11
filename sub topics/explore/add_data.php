@@ -13,7 +13,7 @@
 <?php
 
 ?>
-<div class='row mx-auto'>
+<div class='row mx-auto '>
 <form method="POST" action="submit.php" enctype="multipart/form-data">
 		<label>Name:</label><br>
 		<input type="text" name="name"><br>
@@ -24,12 +24,12 @@
         <label>Publications:</label><br>
 		<input type="number" name="publications" min="0" onchange="addFields()"><br><br>
         <div id="textFields"></div>
-		<input type="submit" value="Submit">
+		<input class='btn' type="submit" value="Submit">
+        <button class='btn' onclick="goBack()" type="button">Back</button>
 </form>
 
 
 </div>
-
 
 
 <!--footer-->
@@ -60,4 +60,8 @@
 			textFieldsDiv.appendChild(document.createElement("br"));
 		}
 	}
+
+    function goBack() {
+    history.back();
+}
 </script>
