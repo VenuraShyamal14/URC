@@ -14,12 +14,13 @@
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+mysqli_set_charset($conn, "utf8mb4");
 
 // Get keyword from user input
 $keyword = $_POST['keyword'];
 
 // Prepare SQL statement
-$sql = "SELECT * FROM publications WHERE name LIKE '%" . $keyword . "%'";
+$sql = "SELECT * FROM pubnew WHERE name LIKE '%" . $keyword . "%'";
 $result = $conn->query($sql);
 
 $array1 = array();
