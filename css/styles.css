@@ -25,6 +25,9 @@ p{
 h2{   
     color: #800000;
 }
+h3{
+    padding: 0px 10%;
+}
 
 
 
@@ -86,9 +89,6 @@ h2{
 
 
 
-#carouselControls{  
-    position: relative;
-}
 
 .carouselImg{
     height: 100vh;
@@ -98,7 +98,7 @@ h2{
 
 
 .dropdown-item{
-    color: #fd7e14;
+    color: #800000;
     font-size: 1em; 
     transition-property: background-color;
     transition-timing-function: ease;
@@ -106,13 +106,15 @@ h2{
 }
 
 .dropdown-menu{
-    background-color: #800000;
+    background-color:white;
+}
 
+.has-dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .dropdown-toggle{
-    color: #fd7e14;
-    
+    color: #800000;
     font-size: 1.3em;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -137,35 +139,36 @@ h2{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 
 .dropdown-toggle:hover {
-    background-color: #6e0303;
+    /*background-color: #6e0303;*/
     color: #fd7e14;
    
 }
 
 .navbar-brand:hover {
-    background-color: #800000;
+    /*background-color: #800000;*/
     color: #fd7e14;
 }
 
 /* Change the background color of the dropdown menue when the mouse hover */
 
 .dropdown-item:hover {
-    background-color: #fd7e14;
-    color: #800000;
+   /*background-color: #fd7e14;*/
+    color: #fd7e14;
 }
 
 .navbar-brand{
-    color: #fd7e14;
+    color: #800000;
     font-weight: bold;
     font-size: 1.5em;
-    text-shadow: 2px 2px #000000;
+    
 }
 
 
 
 .navbar{
-    background-color: #800000;
-    color: #fd7e14;
+    background-color: white;
+    color: #800000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0);
 }
 
 footer{
@@ -247,3 +250,53 @@ footer{
     background-color: #800000;
     color: #fd7e14;
 }
+
+.btn-search{
+    background-color: #DC353A;
+}
+
+
+ /* Event section styles */
+    .event {
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+
+   
+
+  
+
+@media (max-width: 767px) {
+		#news .carousel-inner .carousel-item > div {
+			display: none;
+		}
+		#news .carousel-inner .carousel-item > div:first-child {
+			display: block;
+		}
+	}
+
+	#news .carousel-inner .carousel-item.active,
+	#news .carousel-inner .carousel-item-next,
+	#news .carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	/* medium and up screens */
+	@media (min-width: 768px) {
+
+		#news .carousel-inner .carousel-item-end.active,
+		#news .carousel-inner .carousel-item-next {
+			transform: translateX(25%);
+		}
+
+		#news .carousel-inner .carousel-item-start.active, 
+		#news .carousel-inner .carousel-item-prev {
+			transform: translateX(-25%);
+		}
+	}
+
+	#news .carousel-inner .carousel-item-end,
+	#news .carousel-inner .carousel-item-start { 
+		transform: translateX(0);
+	}

@@ -21,9 +21,10 @@
 		<input type="text" name="faculty"><br><br>
 		<label>Image:</label><br>
 		<input type="file" name="image"><br><br>
-        <label>Publications:</label><br>
-		<input type="number" name="publications" min="0" onchange="addFields()"><br><br>
-        <div id="textFields"></div>
+        <label>Number of Publications:</label><br>
+		<input type="number" name="publications" min="0" oninput="addFields()"><br><br>
+        <label id='hidden-label' style='display:none;'>Enter your publications:</label><br>
+        <div id="textFields"></div><br><br>
 		<input class='btn' type="submit" value="Submit">
         <button class='btn' onclick="goBack()" type="button">Back</button>
 </form>
@@ -40,6 +41,7 @@
 
 <script >
 	function addFields() {
+        document.getElementById('hidden-label').style.display='block';
 		// Get the number of publications entered by the user
 		var numPublications = document.getElementsByName("publications")[0].value;
 		// Get the div element where the text fields will be added

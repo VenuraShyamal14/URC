@@ -85,8 +85,9 @@ function clickedname(button) {
                             //displayData(myObj);
                             //alert(myObj[0].URL);
                             // Create the popup card container element
-                            const popupCard = document.createElement("div");
 
+                            const popupCard = document.createElement("div");
+                            
                             popupCard.setAttribute("id", "temp_popup1");
                             popupCard.classList.add('position-fixed');
     
@@ -142,4 +143,3 @@ function clickedname(button) {
 			});
 			return false;
 }
-

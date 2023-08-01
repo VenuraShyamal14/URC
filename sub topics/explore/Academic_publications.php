@@ -64,6 +64,11 @@
           <input type="radio" class="btn-check" name="btnradio" id="Arts" autocomplete="off">
            <label class="btn check_btn btn-outline-danger" for="Arts">Arts</label>
         </li>
+
+        <li class="nav-item">
+          <button class="btn " type="submit" onclick="window.location.href='add_data.php';">Add Data</button>
+        </li>
+        
       </ul>
       
         </div>
