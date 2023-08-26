@@ -76,7 +76,7 @@
     <br><br><br>
 
 <h1 style="padding-left:25;">Latest Research</h1>
-<div class="row row-cols-1 row-cols-md-4 g-4" style="marging:0;justify-content:center;">
+<div class="row row-cols-1 row-cols-md-4 g-4 mx-0" style="marging:0;justify-content:center;">
         <a class="cardlink" href="https://agri.pdn.ac.lk/research-stories" style="width: 18rem;">
             <div class="col">
                 <div class="card h-100">
@@ -257,7 +257,7 @@ CVCD Excellence Awards have been presented by the Committee of the Vice Chancell
 
 <br>
 
-<div class="row" >   
+<div class="row mx-0" >   
     <div class="col">
     <h1 class="content">Events & Open Calls</h1>
 
