@@ -6,11 +6,13 @@
 }
 
 body{
+    
     padding-top: 66px;
     background-color: #FFF9CA;
 }
 
 h1{ 
+    
     padding: 0px 10%; 
     color: #800000;
 }
@@ -19,7 +21,7 @@ p{
     
     padding: 0px 10%;
     color: #800000;
-   
+    
 }
 
 h2{   
@@ -169,21 +171,22 @@ h3{
     background-color: white;
     color: #800000;
     box-shadow: 0 2px 4px rgba(0, 0, 0);
+
 }
 
 footer{
     width: 100%;
-    height: 120px;
+    height: 50%;
     position:relative;
     bottom:0;
     background-color: #800000;
-    text-align: center;
+    margin-top:100px;
     padding-top: 40px;
-    margin-top: 1000px;
+
 }
 
 .footertext{
-    color: #fd7e14;
+    color: white;
     
 }
 
@@ -300,3 +303,4 @@ footer{
 	#news .carousel-inner .carousel-item-start { 
 		transform: translateX(0);
 	}
+

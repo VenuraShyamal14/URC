@@ -1,4 +1,4 @@
-    <?php 
+<?php 
     include_once("../../db_connect.php");
     ?>
 
@@ -8,19 +8,19 @@ $data = json_decode(file_get_contents("php://input"), true);
 $id=$data["Id"];
 
 mysqli_set_charset($conn, "utf8mb4");
-$query1 = "SELECT * FROM cards WHERE faculty = '$id'";
-//$query1 = "SELECT * FROM cards WHERE id = 1";
-$result1 = mysqli_query($conn, $query1);
-//$researcher = mysqli_fetch_assoc($result1);
+$query = "SELECT * FROM researchers WHERE name LIKE '%$id%'";
 
-$array1 = array();
-while($researcher = mysqli_fetch_assoc($result1) ) {
+$result = mysqli_query($conn, $query);
 
-    $array1[] = $researcher;
-
+$filteredResults = array();
+while ($row = mysqli_fetch_assoc($result)) {
+    $parts = explode('.', $row['name']);
+    $lastName = end($parts);
+    if (stripos($lastName, $id) === 0) {
+        $filteredResults[] = $row;
+    }
 }
 
-
-echo json_encode($array1, JSON_UNESCAPED_UNICODE);
+echo json_encode($filteredResults, JSON_UNESCAPED_UNICODE);
 
 mysqli_close($conn);

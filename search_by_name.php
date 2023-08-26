@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 $keyword = $_POST['keyword'];
 
 // Prepare SQL statement
-$sql = "SELECT * FROM cards WHERE name LIKE '%" . $keyword . "%'";
+$sql = "SELECT * FROM researchers WHERE name LIKE '%" . $keyword . "%'";
 $result = $conn->query($sql);
 
 $array1 = array();

@@ -1,6 +1,7 @@
 
 
 let myObj;
+
 function searchData(id) {
     var data = {
         Id: id,

@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/index.php" style="font-size: clamp(1rem, 2.5vw, 2rem);">
       <img src="/img/nav Icon.png" width="40" height="40" class="d-inline-block align-center" alt="">
-      University Research Center</a>
+      University Research Council</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,29 +18,39 @@
             <li><a class="dropdown-item" href="/sub topics/explore/Research_units.php">•Research units</a></li>
             <li><a id="nav_publication" class="dropdown-item" href="/sub topics/explore/Academic_publications.php">•Academic publications</a></li>
             <li><a class="dropdown-item" href="/sub topics/explore/Research_facilities.php">•Research facilities</a></li>
-            <li><a class="dropdown-item" href="/sub topics/explore/Find_researcher.php">•Find researcher</a></li>
+            <li><a class="dropdown-item" href="/sub topics/explore/Find Tier4* Researcher.php">•Find Tier4* Researcher</a></li>
           </ul>
         </li>
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Innovation & impact
+              Innovation & Impact
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/sub topics/Innovation_and_impact/Research_impact.php">•Research impact</a></li>
-            <li><a class="dropdown-item" href="/sub topics/Innovation_and_impact/Honours.php">•Honours</a></li>
+            <li><a class="dropdown-item" href="/sub topics/Innovation_and_impact/Honours.php#research_impact">•Research impact</a></li>
+            <li><a class="dropdown-item" href="/sub topics/Innovation_and_impact/Honours.php#honours">•Honours</a></li>
           </ul>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              research environment
+              Research Environment
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/sub topics/Our research environment/Funding_and_awards.php">•Funding and awards</a></li>
             <li><a class="dropdown-item" href="/sub topics/Our research environment/Supporting_researchers.php">•Supporting researchers</a></li>
-            <li><a class="dropdown-item" href="/sub topics/Our research environment/Working_collaboratively.php">•Working collaboratively</a></li>
-            <li><a class="dropdown-item" href="/sub topics/Our research environment/Ethics.php">•Ethics</a></li>
+            <li><a class="dropdown-item" href="/sub topics/Our research environment/Ethics.php">•Ethics and Regulations</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Publications
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/sub topics/Publications/newsletter.php#enewsletter">•E-Newsletter</a></li>
+            <li><a class="dropdown-item" href="/sub topics/Publications/newsletter.php#hanthana_vision">•Hanthana Vision</a></li>
+            <li><a class="dropdown-item" href="../../doc/Research and Grant Bulletin_2022.pdf">•Research and Grant Bulletin</a></li>
           </ul>
         </li>
 
@@ -50,32 +60,28 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/sub topics/AboutURC/History.php">•	History</a></li>
-            <li><a class="dropdown-item" href="/sub topics/AboutURC/VisionandMission.php">•	Vision & Mission</a></li>
-            <li><a class="dropdown-item" href="/sub topics/AboutURC/Directorsmessage.php">•	Director’s message</a></li>
+            <li><a class="dropdown-item" href="/sub topics/AboutURC/History.php#vision">•	Vision & Mission</a></li>
+            <li><a class="dropdown-item" href="/sub topics/AboutURC/History.php#Directors_Message">•	Director’s message</a></li>
             <li><a class="dropdown-item" href="/sub topics/AboutURC/BoardofManagement.php">•	Board of Management</a></li>
-            <li><a class="dropdown-item" href="/sub topics/AboutURC/Facultyrepresentatives.php">•	Faculty representatives</a></li>
+            <li><a class="dropdown-item" href="/sub topics/AboutURC/Facultyrepresentatives.php">•	Management Committee</a></li>
             <li><a class="dropdown-item" href="/sub topics/AboutURC/Staff.php">•	Staff</a></li>
-            <li><a class="dropdown-item" href="/sub topics/AboutURC/Contactinfo.php">•	Contact info</a></li>
+            <li><a class="dropdown-item" href="/sub topics/AboutURC/History.php#contact_info">•	Contact info</a></li>
           </ul>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Staff Intranet
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/sub topics/staff intranet/downloads.php">•	Downloads</a></li>
-            <li><a class="dropdown-item" href="/sub topics/staff intranet/events.php">•	Events</a></li>
-          </ul>
-        </li>
+        
 
       </ul>
-      <!--
+     
+      <form class="d-flex" role="search" id='searchForm' >
+      <input class="form-control me-2" type="search" placeholder="Search Researcher" id="search_input" aria-label="Search" style="display: none;">
+      <button class="btn btn-search" id="search_researcher_btn" type="submit" onclick="handleButtonClick(event)" style="display: none;">Search</button>
+
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <input class="form-control me-2" type="search" placeholder="Search publication" id="search_input1" aria-label="Search" style="display: none;">
+      <button class="btn btn-search" id="search_publication_btn" type="submit" onclick="handleButtonClick1(event)" style="display: none;">Search</button>
       </form>
-      -->
+  </form>
     </div>
   </div>
 </nav>

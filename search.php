@@ -25,6 +25,7 @@ $result = $conn->query($sql);
 
 // Display results
 if ($result->num_rows > 0) {
+
     while($row = $result->fetch_assoc()) {
          $btn_class= $row["name"];
         echo "<button class=\"$btn_class btn\" onClick=\"clickedname(this)\">";
@@ -35,7 +36,9 @@ if ($result->num_rows > 0) {
         echo "<hr>";
     }
 } else {
-    echo "No results found.";
+
+    echo "<h3 style=\"text-align: center; margin-top: 100px; margin-bottom: 100px;\">No Data Found</h3>";
+
 }
 
 // Close connection

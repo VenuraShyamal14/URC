@@ -1,20 +1,4 @@
 <!--header-->
-<?php
-      include('../../header.html');
-  ?>
-
-   <!--navbar-->
-   <?php
-   include('../../navbar.html');
-    ?>
-  
-    <h2>this is Research_units page</h2>
-
-<!--footer-->
-<?php
-      include('../../footer.html');
-  ?>
-<!--header-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

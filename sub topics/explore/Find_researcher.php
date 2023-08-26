@@ -17,60 +17,16 @@
 ?>
 
 
-
-
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent" aria-expanded="false"      
-        aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <input type="radio" class="btn-check " name="btnradio" id="Agriculture" autocomplete="off" >
-            <label class="btn check_btn btn-outline-danger" for="Agriculture">Agriculture</label>
-        </li>
-        <li class="nav-item">
-          <input type="radio" class="btn-check " name="btnradio" id="Allied Health Sciences" autocomplete="off">
-            <label class="btn check_btn btn-outline-danger" for="Allied Health Sciences">Allied Health Sciences</label>
-        </li>
-        <li class="nav-item">
-          <input type="radio" class="btn-check " name="btnradio" id="Dental Sciences" autocomplete="off">
-            <label class="btn check_btn btn-outline-danger" for="Dental Sciences">Dental Sciences</label>
-        </li>
-        <li class="nav-item">
-          <input type="radio" class="btn-check " name="btnradio" id="Engineering" autocomplete="off" checked >
-            <label class="btn check_btn btn-outline-danger" for="Engineering">Engineering</label>
-        </li>
-        <li class="nav-item">
-          <input type="radio" class="btn-check" name="btnradio" id="Medicine" autocomplete="off">
-            <label class="btn check_btn btn-outline-danger" for="Medicine">Medicine</label>
-        </li>
-        <li class="nav-item">
-          <input type="radio" class="btn-check" name="btnradio" id="Science" autocomplete="off">
-          <label class="btn check_btn btn-outline-danger" for="Science">Science</label>
-        </li>
-        <li class="nav-item">
-          <input type="radio" class="btn-check" name="btnradio" id="Veterinary Medicine and Animal Sciences" autocomplete="off">
-            <label class="btn check_btn btn-outline-danger" for="Veterinary Medicine and Animal Sciences">Veterinary Medicine </label>
-        </li>
-        <li class="nav-item">
-          <input type="radio" class="btn-check" name="btnradio" id="Arts" autocomplete="off">
-           <label class="btn check_btn btn-outline-danger" for="Arts">Arts</label>
-        </li>
-        <li class="nav-item">
-          <button class="btn " type="submit" onclick="window.location.href='add_data.php';">Add Data</button>
-        </li>
-      </ul>
-      
+    <div class="checkbox-container" style="padding-top:50px; margin-left:50px;" >
+        <?php
+            for ($i = 0; $i < 26; $i++) {
+                $letter = chr(65 + $i); // A-Z
+                echo '<input type="radio" class="btn-check " name="btnradio" id=' . $letter . ' autocomplete="off"  >
+            <label class="btn check_btn btn-outline-danger" for=' . $letter . ' ><span>' . $letter . '</span></label>';
+            }
+        ?>
     </div>
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search Researcher" id="search_input" aria-label="Search">
-        <button class="btn btn-search" id="search_researcher_btn" type="submit" onclick="handleButtonClick(event)">Search</button>
-    </form>
-  </div>
-</nav>
+    
 
 
 <div  id="find_researcher_result" class="container "  ></div>
@@ -86,6 +42,10 @@
 
 
 <script>
+ //display search btn
+document.getElementById('search_input').style.display = 'flex';
+document.getElementById('search_researcher_btn').style.display = 'flex';
+
 var outputDiv = document.getElementById('find_researcher_result');
 const checkbuttons = document.querySelectorAll('.btn-check');
 
@@ -96,8 +56,9 @@ function handleButtonClick(event) {
 }
 
 checkbuttons.forEach(function(checkbox) {
-          if (checkbox.checked) {
-            searchData('Engineering');
+          if (!checkbox.checked) {
+              document.getElementById('A').checked = true;
+            searchData('a');
             
           }
 });
@@ -112,97 +73,95 @@ checkbuttons.forEach(function(button) {
 
 
 function displayData(data) {
-  // find the HTML element where you want to display the data
-  
     outputDiv.innerHTML = '';
-  // create a new row to hold the cards
-  var row = document.createElement('div');
-  row.classList.add('row', 'g-4', 'py-3');
-  row.style.justifyContent = "space-evenly";
 
-  
-
-    if (data.length>0){
-  // iterate through the data and create a card for each item
-         for (var i = 0; i < data.length; i++) {
-        var item = data[i];
-
-    //paragraph.innerHTML=item.name;
-    //researcher_img.src="item.URL";
-    // create a new card
-    var card = document.createElement('div');
-    card.classList.add('card', 'col-md-3', 'col-sm-5');
-    card.style.boxShadow='5px 10px 8px 10px #888888';
-    card.style.marginRight = "20px";
-    card.style.marginleft = "20px";
-
-    //create img
-    var cardImg= document.createElement('img');
-    cardImg.classList.add('card-img-top', 'mx-30');
-    cardImg.src=item.URL ;
-    cardImg.style.objectFit='contain';
-    cardImg.style.paddingLeft='10px';
-    cardImg.style.paddingRight='10px';
-    cardImg.height=250;
-    cardImg.width='auto';
-    //cardImg.style.borderRadius='50%';
-    card.appendChild(cardImg);
-
-    // create the card body
-    var cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
-
-
-    //add the name to the card body
-    var name = document.createElement('h5');
-    name.classList.add('card-text');
-    name.innerHTML =item.name;
-    cardBody.appendChild(name);
-
-    //add the faculty to the card body
-    var faculty = document.createElement('h6');
-    faculty.classList.add('card-text');
-    faculty.innerHTML = 'Faculty of ' + item.faculty;
-    cardBody.appendChild(faculty);
-
-    var b1 = document.createElement('button');
-    b1.classList.add('btn','detail_btn1');
-    b1.setAttribute("id", item.name);
-    b1.innerHTML = 'view profile';
-
-    
-    b1.addEventListener('click', function() {
-        search_publication(event.target.id);
-        });
-    cardBody.appendChild(b1);
-    cardBody.style.textAlign = "center";
-
-    //add the card body to the card
-    card.appendChild(cardBody);
-
-    //add the card to the row
-    row.appendChild(card);
-
-    // if 3 cards have been added to the row, create a new row
-    if ((i + 1) % 3 === 0) {
-      outputDiv.appendChild(row);
-      row = document.createElement('div');
-      row.classList.add('row', 'g-4', 'py-3');
-      row.style.justifyContent = "space-evenly";
+    if (data.length === 0) {
+        var noData = document.createElement('h3');
+        noData.style.textAlign = 'center';
+        noData.style.marginTop = '100px';
+        noData.style.marginBottom = '100px';
+        noData.innerHTML = 'No Data Found';
+        outputDiv.appendChild(noData);
     }
 
-     // if there is 2  number of cards, add the last row
-  if (data.length % 3 === 2) {
-    outputDiv.appendChild(row);
-  }
-  if (data.length % 3 === 1) {
-    outputDiv.appendChild(row);
-  }
-    }
+    if (data.length > 0) {
+        // Calculate the number of columns based on available width and desired card width
+        var availableWidth = outputDiv.offsetWidth; // You may need to adjust this based on your layout
+        var cardWidth = 300; // Adjust this to your desired card width
+        var numColumns = Math.floor(availableWidth / cardWidth);
 
- 
-  }
+        // Create a new row to hold the cards
+        var row = document.createElement('div');
+        row.classList.add('row', 'g-4', 'py-3');
+        row.style.justifyContent = "space-evenly";
+
+        for (var i = 0; i < data.length; i++) {
+            var item = data[i];
+
+            // Create a new card
+            var card = document.createElement('div');
+            card.classList.add('card', 'col-md-' + (12 / numColumns), 'col-sm-5');
+            card.style.boxShadow = '5px 10px 8px 10px #888888';
+            card.style.marginRight = "20px";
+            card.style.marginLeft = "20px";
+
+            // Create img
+            var cardImg = document.createElement('img');
+            cardImg.classList.add('card-img-top', 'mx-30');
+            cardImg.src = item.URL;
+            cardImg.style.objectFit = 'contain';
+            cardImg.style.paddingLeft = '10px';
+            cardImg.style.paddingRight = '10px';
+            cardImg.height = 250;
+            cardImg.width = 'auto';
+            card.appendChild(cardImg);
+
+            // Create the card body
+            var cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
+
+            // Add the name to the card body
+            var name = document.createElement('h5');
+            name.classList.add('card-text');
+            name.innerHTML = item.name;
+            cardBody.appendChild(name);
+
+            // Add the faculty to the card body
+            var faculty = document.createElement('h6');
+            faculty.classList.add('card-text');
+            faculty.innerHTML = 'Faculty of ' + item.faculty;
+            cardBody.appendChild(faculty);
+
+            var b1 = document.createElement('button');
+            b1.classList.add('btn', 'detail_btn1');
+            b1.setAttribute("id", item.name);
+            b1.innerHTML = 'view profile';
+
+            b1.addEventListener('click', function () {
+                search_publication(event.target.id);
+            });
+            cardBody.appendChild(b1);
+            cardBody.style.textAlign = "center";
+
+            // Add the card body to the card
+            card.appendChild(cardBody);
+
+            // Add the card to the row
+            row.appendChild(card);
+
+            // If the row is full or we have reached the end of the data, add the row to the outputDiv
+            if ((i + 1) % numColumns === 0 || i === data.length - 1) {
+                outputDiv.appendChild(row);
+
+                // Create a new row
+                row = document.createElement('div');
+                row.classList.add('row', 'g-4', 'py-3');
+                row.style.justifyContent = "space-evenly";
+            }
+        }
+    }
 }
+
 
 
 
@@ -283,7 +242,13 @@ function search_researcher() {
                             displayData(myObj);
                     } else {
                             //alert('no data');
-                            outputDiv.innerHTML=" No results found....";
+                            outputDiv.innerHTML=" ";
+                            var noData = document.createElement('h3');
+                            noData.style.textAlign = 'center';
+                            noData.style.marginTop = '100px';
+                            noData.style.marginBottom = '100px';
+                            noData.innerHTML = 'No Data Found';
+                            outputDiv.appendChild(noData);
                     }
                     //displayData(myObj);
                     //alert(response);

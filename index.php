@@ -77,58 +77,66 @@
 
 <h1 style="padding-left:25;">Latest Research</h1>
 <div class="row row-cols-1 row-cols-md-4 g-4" style="marging:0;justify-content:center;">
-        <a class="cardlink" href="#" style="width: 18rem;">
+        <a class="cardlink" href="https://agri.pdn.ac.lk/research-stories" style="width: 18rem;">
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/research img1.jpg"  alt="..." class="card-img-top">
+                    <img src="img/research img/research img1.jpg"  alt="..." class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">Structure Meets the Function:</h5>
-                        <p class="card-text">The visual perception in humans originates due to a complex mechanism. The eye is an electrically active organ, showing many different types of electrical properties. Light excites the photore </p>
+                        <h5 class="card-title">Developing Eco-Friendly Soil Fertility Management Technologies For Rice Cultivation In Sri Lanka</h5>
+                        <p class="card-text" style=" max-height: calc(1.2em * 15);overflow: hidden;position: relative;">
+Indiscriminate fertilizer usage and related environmental and health issues are hot topics in the agriculture sector today. Even with correct usage of chemical fertilizers, about 50 -80% of the applied fertilizers are lost to the environment polluting the environment. In order to minimize losses while protecting the food security and environmental health of the country, the Department of Soil Science, Faculty of Agriculture in collaboration with several other local and foreign institutions, i.e. Rice Research and Development Institute, Batalegoda, Wayamba University of Sri Lanka, The University of Winnipeg and International Plant Nutrition Institute is conducting a target oriented research project with the funding from National Research Council of Sri Lanka (NRC TO-16/07). 
+</p>
                     </div>
                     <div class="card-footer" style="text-align: center;">
-                        <button class="btn">Read More</button>
+                        <button class="btn" href="https://agri.pdn.ac.lk/research-stories">Read More</button>
                     </div>
                 </div>
             </div>
         </a>
-        <a class="cardlink" href="#" style="width: 18rem;">
+        <a class="cardlink" href="https://covid.eng.pdn.ac.lk/" style="width: 18rem;">
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/research img2.jpg"  alt="..." class="card-img-top">
+                    <img src="img/research img/research img2.jpg"  alt="..." class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">Structure Meets the Function:</h5>
-                        <p class="card-text">The visual perception in humans originates due to a complex mechanism. The eye is an electrically active organ, showing many different types of electrical properties. Light excites the photore </p>
+                        <h5 class="card-title">AI4COVID</h5>
+                        <p class="card-text" style=" max-height: calc(1.2em * 15);overflow: hidden;position: relative;">
+This is a project funded by the IDRC Canada and members from the Faculty of Engineering, Arts and Medicine is involved in the project. Some of the activities carried out under this project are: Development of AI based forecasting models for COVID-19 and similar pandemics; Design and Development of a human behavior emulator for COVID and other pandemic threat assessment to enable optimal spread control while mitigating socioeconomic impact of containment measures and the pandemic and Utilization of AI and Data analytics to analyze and interpret online and household data collected which studies the educational, economical, occupational, sociopolitical, mobility and psychological impact of the pandemic.
+
+</p>
                     </div>
                     <div class="card-footer" style="text-align: center;">
-                        <button class="btn">Read More</button>
+                        <button class="btn" href="https://covid.eng.pdn.ac.lk/">Read More</button>
                     </div>
                 </div>
             </div>
         </a>
-        <a class="cardlink" href="#" style="width: 18rem;">
+        <a class="cardlink"  style="width: 18rem;">
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/research img3.jpg"  alt="..." class="card-img-top">
+                    <img src="img/research img/research img3.jpg"  alt="..." class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">Structure Meets the Function:</h5>
-                        <p class="card-text">The visual perception in humans originates due to a complex mechanism. The eye is an electrically active organ, showing many different types of electrical properties. Light excites the photore </p>
+                        <h5 class="card-title">Applications of White Light Images and Artificial Intelligence for the Early Detection of Oral Cancer in Sri Lanka</h5>
+                        <p class="card-text" style=" max-height: calc(1.2em * 10);overflow: hidden;position: relative;">
+This project involved two phases. Phase one of the study involved obtaining the ‘Mobile Mouth Screening Anywhere – MeMoSA’ software and conducting a feasibility pilot study on its usage in Sri Lanka. The functionality of this software is to provide a platform for transmission of oral cavity images and patient details by the dental surgeons to specialists, where the specialist can provide review decisions and management suggestions. This software was developed by Cancer Research Malaysia (CRMY), and its original version is currently being used in Malaysia. The original version was modified by the developers of the CRMY team to suit local requirements according to instructions from the two oral medicine specialists in the research team. 
+
+</p>
                     </div>
                     <div class="card-footer" style="text-align: center;">
-                        <button class="btn">Read More</button>
+                        
                     </div>
                 </div>
             </div>
         </a>
-        <a class="cardlink" href="#" style="width: 18rem;">
+        <a class="cardlink"  style="width: 18rem;">
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/research img4.jpg"  alt="..." class="card-img-top">
+                    <img src="img/research img/research img4.jpg"  alt="..." class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">Structure Meets the Function:</h5>
-                        <p class="card-text">The visual perception in humans originates due to a complex mechanism. The eye is an electrically active organ, showing many different types of electrical properties. Light excites the photore </p>
+                        <h5 class="card-title">Microbial control of mosquitoes </h5>
+                        <p class="card-text" style=" max-height: calc(1.2em * 20);overflow: hidden;position: relative;">Dengue is one of the deadliest mosquitos borne diseases where Aedes aegypti and Aedes albopictus act as primary and secondary vectors. Sri Lanka is one country with a record number of annual dengue cases. In the absence of effective treatment for dengue disease, the control of mosquito populations is important in controlling the disease. Use of symbiotic microbes in dengue mosquito control programs is an effective alternative to chemical insecticides as the symbiotic microbes affect the fitness of mosquitoes and thereby the population structure. The aim of this study is to characterize the composition and structure of microbial communities (bacteria and eukaryotes) in Ae. aegypti and Ae. albopictus in Sri Lanka and identify the microbes that affect the vectorial capacity and fitness of female mosquitoes as well as the larvicidal activity of these microbes. </p>
                     </div>
                     <div class="card-footer" style="text-align: center;">
-                        <button class="btn">Read More</button>
+                        
                     </div>
                 </div>
             </div>
@@ -148,9 +156,74 @@
 				<div class="carousel-inner" role="listbox">
 					<div class="carousel-item active citem ">
 						<div class="col-md-4">
+							<div class="card" style="height: 750px;">
+								<div class="card-img">
+									<img src="img/news/n1.jpg" class="img-fluid">
+								</div>
+								<h5 class="card-title">Prof. Lakshman Samaranayake Research Excellence Award</h5>
+                                <p class="card-text" style="text-align: justify">In 2023, The URC offered Lakshman Samaranayake Research Excellence Award to five eminent researches. The Award(s) is presented to academic staff who are active in research and are in the permanent cadre of the University of Peradeniya who have undertaken research at the highest international level, as evidenced by:<br>
+•	Documented evidence of international recognition of research accomplishments, such as publications in high-impact factor venues, H-index, etc.<br>
+•	Quality and quantity of research publications.<br>
+•	Evidence in the form of research grants, taking into account the prestige of the funding bodies and the size of the grants awarded.<br>
+•	High-impact applied research work, including acclaimed creative arts, productions, and innovation.
+</p>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item citem">
+						<div class="col-md-4">
+							<div class="card" style="height: 750px;">
+								<div class="card-img">
+									<img src="img/news/n2.jpg" class="img-fluid">
+								</div>
+								<h5 class="card-title">Peradeniya University Research Excellence Showcase</h5>
+                                <p class="card-text" style="text-align: justify">The Peradeniya University Research Excellence Showcase, PURES, is an annual event that showcases the latest research from the University of Peradeniya. It is an important opportunity for researchers to share their work with the wider community, receive feedback, and establish connections with potential collaborators.
+<br>
+In 2023, PURES will expand its scope to include discussions about the formation of two new research centers: one on AI Applications and the other on Social Sciences. <br>
+
+PURES also recognizes researchers who have collectively demonstrated excellence in their research activity.
+</p>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item citem">
+						<div class="col-md-4">
+							<div class="card" style="height: 750px;">
+								<div class="card-img">
+									<img src="img/news/n3.jpg" class="img-fluid">
+                                    <br><br><br><br>
+								</div>
+								<h5 class="card-title">Two eminent researchers received CVCD Excellence Awards – 2022</h5>
+                                <p class="card-text" style="text-align: justify">Prof. Deepthi Yakandawala, Senior Professor at the Department of Botany has been awarded with the prestigious Most Outstanding Senior Researcher award in the Field of Life Sciences at the CVCD  award ceremony 2022.<br>
+
+Dr Nadeesh Adassooriya from the Faculty of Engineering has been awarded with the Most Outstanding Young Researcher award in the Field of Engineering, Architecture and Technology.<br>
+
+CVCD Excellence Awards have been presented by the Committee of the Vice Chancellors and Directors from the 22 state universities and institutes, to recognize, appreciate, and honour the outstanding contributions, accomplishments and impact made by academic staff in Sri Lankan state universities.
+</p>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="carousel-item citem">
+						<div class="col-md-4">
+							<div class="card" style="height: 750px;">
+								<div class="card-img">
+									<img src="img/news/n4.jpg" class="img-fluid">
+								</div>
+								<h5 class="card-title">Peradeniya Researchers Honored with Prestigious Awards at SLDA's 90th Year International Dental Conference</h5>
+                                <p class="card-text" style="text-align: justify">The Sri Lanka Dental Association recognized the following two Peradeniya Researches on 29th June 2023 parallel to the SLDA 90th Year International Dental Conference:<br>
+1.	Prof Parakrama Wijekoon received the Best article award for year 2021 for a paper entitled “The article on “Prevalence of Oronasal fistulate and velopharyngeal insufficiency following cleft plate repair at cleft care Centre, Dental Hospital (Teaching), Peradeniya” published in the Journal of Sri Lanka Dental Association, Volume 51, No 01.<br>
+2.	Prof. AKS Arambawatta received the Best article award for year 2020 for a paper entitled “Dental arch morphology in normal occlusion of the Sri Lankan Population” published in the Journal of Sri Lanka Dental Association Volume 50-No 02. 
+</p>
+							</div>
+						</div>
+					</div>
+                    <!--
+					<div class="carousel-item citem">
+						<div class="col-md-4">
 							<div class="card">
 								<div class="card-img">
-									<img src="https://www.worldresearchcouncil.org/wp-content/uploads/2023/07/d41586-023-02092-9_25528638-460x270.jpg" class="img-fluid">
+									<img src="img/news/5.jpg" class="img-fluid">
 								</div>
 								<h5 class="card-title">Beyond Ozempic: New Obesity Drugs Could Be Cheaper and Even More Effective</h5>
                                 <p class="card-text">Most current BCI systems use one or two sensors to sample up to a few hundred neurons, but neuroscientists are interested in systems that are able to gather data from much larger groups of brain cells.</p>
@@ -161,57 +234,14 @@
 						<div class="col-md-4">
 							<div class="card">
 								<div class="card-img">
-									<img src="https://www.worldresearchcouncil.org/wp-content/uploads/2023/07/maintaining_muscle_strength_with_age-460x270.jpeg" class="img-fluid">
+									<img src="img/news/6.png" class="img-fluid">
 								</div>
 								<h5 class="card-title">Beyond Ozempic: New Obesity Drugs Could Be Cheaper and Even More Effective</h5>
                                 <p class="card-text">Most current BCI systems use one or two sensors to sample up to a few hundred neurons, but neuroscientists are interested in systems that are able to gather data from much larger groups of brain cells.</p>
 							</div>
 						</div>
 					</div>
-					<div class="carousel-item citem">
-						<div class="col-md-4">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://www.worldresearchcouncil.org/wp-content/uploads/2023/06/d991ce6396740b0b547a5faeae51023a.jpg" class="img-fluid">
-								</div>
-								<h5 class="card-title">Beyond Ozempic: New Obesity Drugs Could Be Cheaper and Even More Effective</h5>
-                                <p class="card-text">Most current BCI systems use one or two sensors to sample up to a few hundred neurons, but neuroscientists are interested in systems that are able to gather data from much larger groups of brain cells.</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item citem">
-						<div class="col-md-4">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://www.worldresearchcouncil.org/wp-content/uploads/2023/06/hadza-476x280.jpg" class="img-fluid">
-								</div>
-								<h5 class="card-title">Beyond Ozempic: New Obesity Drugs Could Be Cheaper and Even More Effective</h5>
-                                <p class="card-text">Most current BCI systems use one or two sensors to sample up to a few hundred neurons, but neuroscientists are interested in systems that are able to gather data from much larger groups of brain cells.</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item citem">
-						<div class="col-md-4">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://www.worldresearchcouncil.org/wp-content/uploads/2023/06/download-460x270.jpg" class="img-fluid">
-								</div>
-								<h5 class="card-title">Beyond Ozempic: New Obesity Drugs Could Be Cheaper and Even More Effective</h5>
-                                <p class="card-text">Most current BCI systems use one or two sensors to sample up to a few hundred neurons, but neuroscientists are interested in systems that are able to gather data from much larger groups of brain cells.</p>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item citem">
-						<div class="col-md-4">
-							<div class="card">
-								<div class="card-img">
-									<img src="https://www.worldresearchcouncil.org/wp-content/uploads/2023/06/d991ce6396740b0b547a5faeae51023a.jpg" class="img-fluid">
-								</div>
-								<h5 class="card-title">Beyond Ozempic: New Obesity Drugs Could Be Cheaper and Even More Effective</h5>
-                                <p class="card-text">Most current BCI systems use one or two sensors to sample up to a few hundred neurons, but neuroscientists are interested in systems that are able to gather data from much larger groups of brain cells.</p>
-							</div>
-						</div>
-					</div>
+                    -->
 				</div>
 				<a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -296,67 +326,79 @@
 <div style="background-color: brown; padding: 20px;">
 <h1 class="content" style="color:white;">Features</h1>
 <div class="row row-cols-1 row-cols-md-4 g-4" style="marging:0;">
-        <a class="cardlink" href="#">
+        
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/v6i2.jpg"  alt="...">
+                    <img src="img/features/1.jpg"  alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Structure Meets the Function:
-Visual electrophysiological approaches in the ophthalmology clinic
+                        <h5 class="card-title">Facial Recognition Technology, for Fish
  </h5>
-                        <p class="card-text">The visual perception in humans originates due to a complex mechanism. The eye is an electrically active organ, showing many different types of electrical properties. Light excites the photoreceptors in the retina, resulting in an electrical signal which propagates through the optic nerve and travels to the visual cortex where it is converted into an image. </p>
-                    </div>
-                    <div class="card-footer" style="text-align: center;">
-                        <button class="btn">Read More</button>
-                    </div>
-                </div>
-            </div>
-        </a>
+                        <p class="card-text">Traditional methods of gathering fisheries data can take as long as one or two years, costing time and money that many imperiled global fisheries don’t have.
 
-        <a class="cardlink" href="#">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="img/v7i1.jpg"  alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Detection and Quantification of Venoms of Sri Lankan Snakes; Application in Hospital Setting</h5>
-                        <p class="card-text">Snakebite is a major medical and public health problem in tropical agricultural world including Sri Lanka. The World Health Organization has classified snakebite as a category A neglected tropical disease, highlighting its global health impact. </p>
+Enter FishFace, a new application under development by The Nature Conservancy in partnership with Refind Technologies. Similar to facial recognition software used to identify people, FishFace uses artificial intelligence to learn to recognize fish species in photographs.
+
+“When it comes to fisheries management,” Dr. Chris Gillies of The Nature Conservancy in Australia explains, “what sets apart the stocks that aren’t overfished is good data about the size and distribution of those fish.”
+
+FishFace will make fisheries data available in real time. The project is a finalist in the 2016 Google Impact Challenge: Australia with the potential to receive $750,000 in funding to trial FishFace in Indonesia’s snapper and grouper fisheries.</p>
                     </div>
                     <div class="card-footer" style="text-align: center;">
-                        <button class="btn">Read More</button>
+                        <a href="https://blog.nature.org/2016/10/17/put-face-vanishing-fish-fishface-fisheries-science-technology-overfishing-data/"><button class="btn">Read More</button></a>
                     </div>
                 </div>
             </div>
-        </a>
-        <a class="cardlink" href="#">
+        
+
+        
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/v7i2.jpg" alt="...">
+                    <img src="img/features/2.jpg"  alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Artificial Intelligence Frameworks for Threat
-Assessment and Containment of COVID-19 and Future Epidemics
+                        <h5 class="card-title">Bioacoustics Reveal How Biodiversity Changes Across Borneo’s Logged Forests</h5>
+                        <p class="card-text">The chainsaw roars to life and the stench of gasoline fills the air. Steel meets hardwood, and dust pulses from the wound like arterial spray, raining down onto the clay soil as the blade cuts deeper into the massive dipterocarp.
+
+Then the tree groans. It falls — seemingly in slow motion as wood splinters and earth rips — tearing down vines and obliterating smaller trees beneath its bulk. And then comes the silence, punctuated by the dying sputters of the chainsaw.
+
+I’m deep in a logging concession in Indonesian Borneo, and I’ve just witnessed the routine harvesting of a dipterocarp tree bound for the plywood mill. Vast stands of selectively logged forest still remain, but many parts of Indonesia are transitioning from forestry to more intensive land uses, like oil palm and acacia plantations. And with those changes come impacts to the region’s biodiversity and ecosystem services.</p>
+                    </div>
+                    <div class="card-footer" style="text-align: center;">
+                        <a href="https://blog.nature.org/2017/05/17/bioacoustics-reveal0biodiversity-changes-across-logged-forsts-borneo/"><button class="btn">Read More</button></a>
+                    </div>
+                </div>
+            </div>
+        
+        
+            <div class="col">
+                <div class="card h-100">
+                    <img src="img/features/3.jpg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Precision Agriculture: Potential and Limits
 </h5>
-                        <p class="card-text">A research team led by Prof. Janaka Ekanayake from the Department of Electronic and Electrical Engineering, Faculty of Engineering, University of Peradeniya, is using Artificial Intelligence (AI) frameworks for threat assessment and containment for COVID-19 and future epidemics while mitigating the socio-economic impact on identified vulnerable groups. </p>
+                        <p class="card-text">Digital technology applied to farm machinery and cloud-based information is making farming seem like science fiction in some places. Drones buzz over the landscape monitoring crop conditions and spotting problems, like pest infestations or weeds. Farmers receive personalized weather information which predicts how rainfall will vary from one field to the next. Soils are mapped at a level of precision unimaginable only a few years ago, and sensors tell farmers exactly how much water is being used at thousands of different data points.
+
+The cabins of farm machinery are filled with GPS systems and drivers no longer drive. Instead, they sit in the cabin checking screens that control the appliances, which move across fields delivering precisely measured quantities of inputs in precisely the best place, at programmed times, in perfectly straight lines or contoured to the land—whatever the data determines will give the best yield.</p>
                     </div>
                     <div class="card-footer" style="text-align: center;">
-                        <button class="btn">Read More</button>
+                        <a href="https://www.nature.org/en-us/what-we-do/our-insights/perspectives/precision-agriculture-potential-and-limits/"><button class="btn" >Read More</button></a>
                     </div>
                 </div>
             </div>
-        </a>
-        <a class="cardlink" href="#">
+        
+     
             <div class="col">
                 <div class="card h-100">
-                    <img src="img/v8i1.jpg" alt="...">
+                    <img src="img/features/4.jpg" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Democracy Building Initiatives under Yahapalanaya Regime</h5>
-                        <p class="card-text">This article intends to provide a summary of key findings arising from a research project conducted by the Regional Centre for Strategic Studies (RCSS), Colombo in collaboration with the University of South Carolina Rule of Law Collective (ROLC), USA. </p>
+                        <h5 class="card-title">Solar Energy Development Doesn’t Have to Destroy Vital Habitat (but It Could)</h5>
+                        <p class="card-text">“There are some caveats here,” said lead author Michael Levin, “and it’s important to note that there is substantial variation in how much land is likely to be converted at state levels. Some states are projected to see really high levels of development occurring on land with high value for animal movement.”
+
+Scientists note that though solar development is not projected to be a massive driver of land-cover change relative to other drivers, such as agriculture or urbanization, some land covers with higher value for animal movement (deciduous forest in particular) are projected to be converted to solar energy more than other land covers with lower value for animal movement, such as barren lands or intensive agricultural landscapes.   </p>
                     </div>
                     <div class="card-footer" style="text-align: center;">
-                        <button class="btn">Read More</button>
+                        <a href="https://blog.nature.org/science-brief/solar-development-doesnt-have-to-destroy-vital-habitat/"><button class="btn">Read More</button></a>
                     </div>
                 </div>
             </div>
-        </a>
+        
 
 
     </div>
